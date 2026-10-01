@@ -10,9 +10,13 @@ public class LabFirst {
         System.out.print("b = ");
         double b1 = in.nextDouble();
 
-        double result1 = (a1 * b1 - (a1 + b1) * (a1 - b1))
-                / (Math.pow(b1, 4) + Math.pow(a1, 3)) + 5 * b1;
-        System.out.println("Результат = " + result1);
+        double denominator1 = Math.pow(b1, 4) + Math.pow(a1, 3);
+        if (denominator1 == 0) {
+            System.out.println("Ділення на нуль неможливе");
+        } else {
+            double result1 = (a1 * b1 - (a1 + b1) * (a1 - b1)) / denominator1 + 5 * b1;
+            System.out.println("Результат = " + result1);
+        }
 
         System.out.println("\n2. Цілі вхідні дані, дійсний результат");
         System.out.print("a = ");
@@ -20,9 +24,13 @@ public class LabFirst {
         System.out.print("b = ");
         int b2 = in.nextInt();
 
-        double result2 = (double) (a2 * b2 - (a2 + b2) * (a2 - b2))
-                / (Math.pow(b2, 4) + Math.pow(a2, 3)) + 5 * b2;
-        System.out.println("Результат = " + result2);
+        double denominator2 = Math.pow(b2, 4) + Math.pow(a2, 3);
+        if (denominator2 == 0) {
+            System.out.println("Ділення на нуль неможливе");
+        } else {
+            double result2 = (double) (a2 * b2 - (a2 + b2) * (a2 - b2)) / denominator2 + 5 * b2;
+            System.out.println("Результат = " + result2);
+        }
 
         System.out.println("\n3. Дійсні вхідні дані, цілий результат");
         System.out.print("a = ");
@@ -30,9 +38,13 @@ public class LabFirst {
         System.out.print("b = ");
         double b3 = in.nextDouble();
 
-        int result3 = (int) ((a3 * b3 - (a3 + b3) * (a3 - b3))
-                / (Math.pow(b3, 4) + Math.pow(a3, 3)) + 5 * b3);
-        System.out.println("Результат = " + result3);
+        double denominator3 = Math.pow(b3, 4) + Math.pow(a3, 3);
+        if (denominator3 == 0) {
+            System.out.println("Ділення на нуль неможливе");
+        } else {
+            int result3 = (int) ((a3 * b3 - (a3 + b3) * (a3 - b3)) / denominator3 + 5 * b3);
+            System.out.println("Результат = " + result3);
+        }
 
         in.close();
     }
